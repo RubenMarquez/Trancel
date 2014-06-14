@@ -1,0 +1,393 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script language="javascript">
+
+
+
+function chile(){
+var letra, nombre, num, conver, ancho, x;
+nombre=document.getElementById("textnombre").value;
+ancho=nombre.length;
+conver=nombre.toUpperCase();
+document.getElementById("textnombre").value=conver;
+for(x=0;x<=ancho-1;x++){
+	num=conver.charAt(x);
+	if((num>='A')&&(num<='Z')||(num==' ')){
+		}
+		else{
+			alert("Se encontró un caracter incorrecto");
+			break;
+			}
+	}
+}
+function asunto(){
+	var asun, asun2;
+	asun=document.getElementById("textasunto").value;
+	asun2=asun.toUpperCase();
+	document.getElementById("textasunto").value=asun2;
+	}
+	
+	
+function chile2(){
+var suguridad1,seguridad2;
+seguridad1=document.getElementById("seguridad1").value
+seguridad2=document.getElementById("seguridad2").value
+if(seguridad1==seguridad2){
+	}
+	else{
+		alert("Las claves no coinciden");
+		
+		}
+}
+	function enviar(){
+		var ch1, ch2, ch3, ch4, ch5 ;
+	    ch1=document.getElementById("textnombre").value;
+		ch2=document.getElementById("txtmail").value;
+		ch3=document.getElementById("texttelefono").value;
+		ch4=document.getElementById("textasunto").value;
+		ch5=document.getElementById("seguridad2").value;
+		
+		if((ch1=="")||(ch2=="")||(ch3=="")||(ch4=="")||(ch5=="")){
+			alert("Favor de introducir toda la informacion");
+		}
+		else{
+			alert("Mensaje enviado");
+			document.getElementById("textnombre").value="";
+		    document.getElementById("txtmail").value="";
+		    document.getElementById("texttelefono").value="";
+		    document.getElementById("textasunto").value="";
+		    document.getElementById("seguridad2").value="";
+		}
+		}
+		
+		
+function correo(){
+	var corr, ancho, x, ar, ar2, p, p2;
+corr=document.getElementById("txtmail").value;
+
+ 
+	if(((corr.charAt(0)>='0')&&(corr.charAt(0)<='9'))||(corr.charAt(0)=='@'))
+	{
+			alert("No se permiten números en el primer caracter");
+			
+	}
+	else
+	{
+		ar=corr.indexOf('@');
+		ar2=corr.lastIndexOf('@');
+		if(ar!=ar2){
+			alert("Solo se permite una @");
+			
+		}
+		else{
+			if((ar==-1)&&(ar2==-1))
+			{
+			alert("Introduce una @");	
+			
+				}
+				else{
+					p=corr.indexOf('.');
+	          
+				  if(p==-1){
+					  alert("Introduce un punto");
+					
+					  
+					  }
+			  }
+					}
+			
+ }}
+ 
+
+
+
+
+	
+function telejono(){
+	var num, ancho, num2;
+	num=document.getElementById("texttelefono").value;
+	ancho=num.length;
+	for(x=0; x<=ancho-1; x++){
+		num2=num.charAt(x);
+	if(((num2>=0) && (num2<=9 ))|| (num2=='-'))
+	{
+		}
+		else{
+			alert("Solo se permiten números y guión");
+			break;
+			}
+		}
+	}
+	
+	
+	
+
+	
+</script>
+
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>TRANCEL</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">¿Quiénes somos?</a></li>
+            <li><a href="#page3">Servicios o Productos</a></li>
+			<li><a href="#page4">Equipo</a></li>
+            <li><a href="#page5">Cotáctanos</a></li>
+		</ul>		
+	</div>
+    <br>
+    <br>
+    <center>
+      <img src="imagenes/trancel-o-telcel_imagen1.jpg" width="122" height="92">
+    </center>
+    <br>
+    <br>
+	<div data-role="footer">
+		<h2>Autor: C. Sr. Doc. Prof. Lic. Ing. Ruben Emmanuel Márquez Torres</h2>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>¿Quiénes somos?</h1>
+	</div>
+	<div data-role="content">	
+		<center><h1>TRANCEL</h1></center>
+        <br>
+        Trancel es una marca propiedad de la empresa mexicana Radio móvil PIZZA, S.A. de C.V.. Tiene presencia en todo México y se dedica a ofrecer servicios de telefonía móvil, telefonía fija, servicios de banda ancha, entre otros servicios. Es subsidiaria de la empresa mexicana América Móvil, una filial de Grupo Tarso.  
+        <br>
+        <center><h1>MISIÓN</h1></center>	
+        <br>
+             Hacer más competitivos a nuestros clientes a través del desarrollo e implementación de soluciones tecnológicas de vanguardia, generadas por un equipo humano y tecnológico altamente especializado.
+             <br>
+             <center><h1>VISIÓN</h1></center>	
+             <br>
+                 Somos una empresa líder en el desarrollo, comercialización y prestación de servicios de tecnología de información, con una estructura financiera sólida y rentable, producto de la eficiencia de nuestros procesos y la calidad de nuestro recurso humano.  
+                 <br>
+                 <center><h1>VALORES</h1></center>
+                 <br>
+RESPONSABILIDAD: Cumplimos nuestros compromisos en la forma y tiempo acordada con nuestros clientes internos y externos.
+<br>
+
+INTEGRIDAD: Mantenemos una conducta ejemplar y de respeto acorde a normas socialmente aceptadas.
+<br>
+
+HONRADEZ: Existe total transparencia en nuestras acciones, no tenemos doble estándar.
+<br>
+BENEFICIO A LA SOCIEDAD: Somos un real aporte a la comunidad, contribuyendo a mejorar la calidad de vida.
+<br>
+CONFIDENCIALIDAD: Mantenemos absoluta reserva de la información que administramos.
+<br>
+
+                 
+	</div>
+	<div data-role="footer">
+		<h4>TRANCEL</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>TRANCEL</h1>
+	</div>
+	<div data-role="content">	
+    <center><h1>Samsung Galaxy S5</h1></center>
+		El Samsung Galaxy S5 es la quinta generación del Galaxy S, esta vez conservando bastantes aspectos de diseño y hardware del Galaxy S4, pero agregando funcionalidades como monitor de ritmo cardíaco, sensor dactilar, y resistencia al agua. El Galaxy S5 posee una pantalla Súper AMOLED 1080p de 5.1 pulgadas, cámara de 16 megapíxeles con flash LED y captura de video Ultra HD, 2GB de RAM, 16GB o 32GB de almacenamiento interno, ranura microSD, procesador quad-core a 2.5GHz, batería de 2800mAh, y corre Android 4.4 KitKat con la interfaz de Samsung, utilizando mejores materiales para su parte posterior en lugar del plástico brillante característico de las generaciones anteriores
+        <br>
+        <br>
+        <center>
+          <img src="imagenes/SGS5.jpg" width="280" height="200">  </center>	
+          <br>
+           <center><h1>Nokia</h1></center>
+          El Nokia Lumia 1020 es el sucesor del 808 PureView, esta vez corriendo Windows Phone 8. El Lumia 1020 posee una cámara de 41 megapíxeles con estabilización óptica de imagen, zoom 3x sin pérdida en fotos y 6x en videos 720p, con una lente Carl Zeiss de 6 componentes. En cuanto a características, cuenta con una pantalla AMOLED 720p, 2GB de RAM, procesador dual-core, NFC, sonido Dolby, y soporte LTE.
+          <br>
+          <br>
+        <center>
+          <img src="imagenes/Nokia-Lumia-1020.jpg" width="280" height="200">
+        </center>		
+        <br>
+         <center><h1>Blacberry Z30</h1></center>
+        El BlackBerry Z30 es el nuevo Smartphone de BlackBerry con una pantalla Súper AMOLED de 5 pulgadas y procesador quad-core Snapdragon S4 Pro a 1.7GHz. Además, cuenta con cámara de 8 megapíxeles, cámara frontal para video chat, conectividad LTE, 2GB de RAM, 16GB de almacenamiento interno, ranura microSD y corre BlackBerry 10.2 OS.
+        <br>
+        <br>
+        <center>
+          <img src="imagenes/BB-Z30.jpg" width="280" height="200">
+        </center>
+        <br>
+         <center><h1> HTC ONE M8</h1></center>
+        El HTC One M8 es la segunda generación del HTC One, esta vez con una "Cámara Dúo" que consta de dos lentes en la parte posterior que permiten seleccionar el foco de la foto luego de capturarla, entre otras funciones. El nuevo HTC One posee un procesador Snapdragon 801 quad-core, chasis de aluminio unibody, parlantes stereo BoomSound mejorados, ranura microSD, pantalla 1080p de 5 pulgadas, 2GB de RAM y corre Android 4.4 KitKat con la interfaz de usuario Sense 6.
+        <br>
+        <br>
+        <center>
+          <img src="imagenes/htc-one-m8.jpg" width="280" height="200">
+        </center>
+        <br>
+        	 <center><h1>LG G2</h1></center>
+El LG G2 es el nuevo smartphone insignia de LG, que combina hardware de última generación con mejoras de software y diseño innovador. Posee una pantalla 1080p de 5.2 pulgadas, procesador Snapdragon 800 a 2.26GHz, 2GB de RAM, cámara de 13 megapíxeles con estabilización óptica de imagen, y soporte para audio a 24 bits, 192KHz. El LG G2 posee los botones de volumen y encendido en la parte posterior, para permitir una mejor operación. Aun así, posee una batería de 3000mAh.
+<br>
+<br>
+<center>
+  <img src="imagenes/lg_g2.jpg" width="280" height="200">
+</center>
+        <br>
+         <center><h1>iPhone 5S</h1></center>
+        El Apple iPhone 5S sucede al iPhone 5 conservando el aspecto exterior, pero introduciendo un nuevo chip A7 de 64 bits que mejora la performance en más del doble según Apple. Conserva la pantalla Retina de 4 pulgadas, pero agrega también un chip dedicado a movimientos, para una nueva generación de aplicaciones. También incorpora un sensor de huellas dactilares en el botón de inicio, que permite incrementar la seguridad del teléfono. Su cámara conserva los 8 megapíxeles pero esta vez con pixeles de 1.5 micrones, y apertura ƒ/2.2, y está disponible en versiones de 16, 32 o 64GB de almacenamiento interno.
+        <br>
+        <br>
+        <center>
+          <img src="imagenes/iphone5s.jpg" width="280" height="200">
+        </center>
+	</div>
+	<div data-role="footer">
+		<h4>TRANCEL</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Equipo</h1>
+	</div>
+	<div data-role="content">	
+		<center><h1>INTEGRANTES DEL EQUIPO</h1></center>
+    <br>
+        <b>DESCRIPCIÓN PERSONAL</b>
+        <br>	
+    	<b>MI NOMBRE ES:</b> Araceli Rivas Cruz	
+        <br>
+        <b>SEXO:</b> Femenino
+        <br>
+        <b> EDAD:</b> 17
+        <br>
+        <b>CORREO ELECTRONICO:</b> xelii_280597@hotmail.com
+        <br>
+        <b>DOMICILIO:</b> Calle Mariano Matamoros #14 Colon
+        <br>
+        <b>TELÉFONO:</b>243-112-69-97
+        <br>
+        <b>ASIGNATURA:</b>Desarrolla Aplicaciones Móviles
+        <br>
+        <b>COLOR FAVORITO: </b> Rosa
+        <br>
+        <b>CURSO</b>: El cuarto semestre en cbtis 184
+        <br>
+        <b>PASATIEMPO:</b> Escuchar Música
+        <br> 
+        <center>
+          <img src="imagenes2/IMG_20140517_191600.jpg" width="150" height="200">
+        </center>
+<br>
+<br>
+        <b>DESCRIPCIÓN PERSONAL</b>
+        <br>
+        <b>MI NOMBRE ES</b>: Ruben Emmanuel Marquez Torres
+        <br>
+        <b>SEXO:</b>Masculino
+        <br>
+        <b>EDAD:</b> 17
+        <br>
+        <b>CORREO ELECTRONICO:</b>aminowana_michaelis@hotmail.com
+        <br>
+        <b>DOMICILIO: </b>Iturbide S/N Chietla
+        <br>
+        <b>TELÉFONO:</b>243-103-91-96
+        <br>
+        <b>ASIGNATURA:</b> Desarrolla Aplicaciones Móviles
+        <br>
+        <b>COLOR FAVORITO:</b> Negro
+        <br>
+        <b>CURSO:</b> El cuarto semestre en cbtis 184
+        <br>
+        <b>PASATIEMPO:</b> Escuchar Música
+        <center>
+          <img src="imagenes2/IMG_20140609_122254.jpg" width="150" height="200" alt="ruben">
+        </center>
+	
+	</div>
+	<div data-role="footer">
+		<h4>TRANCEL</h4>
+	</div>
+</div>
+<div data-role="page" id="page5">
+	<div data-role="header">
+		<h1>Contáctanos</h1>
+	</div>
+	<div data-role="content">
+    
+		<center><h1>¿Quiere mandar un mensaje?</h1></center>
+		<center><table width="0" border="0">
+  <tr>
+    <td>Nombre</td>
+    <td><div data-role="fieldcontain">
+     
+      <input type="text" name="textinput" id="textnombre" value=""  onblur="chile()"/>
+    </div></td>
+  </tr>
+  <tr>
+    <td>E-mail</td>
+    <td><div data-role="fieldcontain">
+     
+      <input type="text" name="textinput2" id="txtmail" value=""  onblur="correo()"/>
+    </div></td>
+  </tr>
+  <tr>
+    <td>Teléfono</td>
+    <td><div data-role="fieldcontain">
+      
+      <input type="text" name="textinput3" id="texttelefono" value=""  onblur="telejono()" />
+    </div></td>
+  </tr>
+  <tr>
+    <td>Asunto</td>
+    <td><div data-role="fieldcontain">
+      
+       
+        <textarea cols="40" rows="8" name="textarea" 
+        id="textasunto" onblur="asunto()"></textarea>
+      
+     
+     </td>
+  </tr>
+  <tr> <td>Seguridad</td></tr>
+  <tr>
+   
+    <td><div data-role="fieldcontain">
+      <input type="text" name="textinput5" id="seguridad1"
+      disabled="disabled" value="Aminowana"  />
+      <td><div data-role="fieldcontain">
+        <input type="text" name="textinput6" id="seguridad2" onblur="chile2()" value=""  />
+      </div></td>
+    </div></td>
+  </tr>
+  <tr>
+    <td>Enviar</td>
+    <td><button onclick="enviar()">Enviar</button></td>
+  </tr>
+</table></center>
+ <br>
+    <br>
+    <center>
+      <img src="imagenes/trancel-o-telcel_imagen1.jpg" width="162" height="102">
+    </center>
+    <br>
+    <br>	
+
+		
+	</div>
+	<div data-role="footer">
+		<h4>TRANCEL</h4>
+	</div>
+</div>
+
+</body>
+</html>
